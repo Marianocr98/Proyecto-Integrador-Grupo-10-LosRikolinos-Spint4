@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/create.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Cargar nuevos productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../partials/header') %> 
+
+    <main>
+        <section class="top">
+            <div class="admin">
+                <h1 class="create">Subir productos</h1>
+            </div>
+        </section>
+        <form action="" method="POST">
+            <div class="padre-create">
+                <label for="name-product">Nombre</label>
+                <input type="text" placeholder="Nombre del producto" name="name-product" id="name-product">
+
+                <label for="descrption">Descripción</label>
+                <textarea name="descrition" id="description" cols="30" rows="5"></textarea>
+
+                
+                <label for="description">Imagen del producto</label>
+                <input type="file" name="img-product"> 
+                
+                <label for="category">Categoria</label>
+                
+            </div>
+            
+            <div class="categorias-real">
+                
+
+                <div class="contenedor">
+                    <div class="tipo-categoria">
+                    <select name="category" id="category">
+                    <option value="hamburguer">Hamburguesas</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="empanada">Empanadas</option>
+                    <option value="ravioles">Pastas</option>
+                    <option value="asado">Asado</option>
+                    <option value="postre">Postres</option>
+                    <option value="bebidas">Bebidas</option>
+                </select>
+                </div>
+                
+
+                <div class="price">
+                <label for="price"></label>
+                <input type="number" placeholder="Precio" name="price">
+                </div>
+                </div>
+                
+            
+                
+
+                <div class="button-admin">
+                <input type="reset" value="Cancelar">
+                <input type="submit" value="Crear producto">
+                </div>
+                
+            </div>
+        </form>
+
+        <div class="h2-add-create">
+            <h2>Productos agregados</h2>
+        </div>
+
+        <!-- Producto agregado -->
+
+    <div class="padre-products-add">
+
+        <section class="container-create">
+            <article class="container-product-create">
+                <div class="container-img">
+                    <img src="https://image.freepik.com/vector-gratis/lindo-gato-comiendo-hamburguesas-guinando-ojo_253952-262.jpg" alt="">
+
+                </div>
+
+                <div class="info-create">
+
+                    <h3>Nombre del producto.</h3>
+
+                    <h4 class="description-create">Descripcion del producto:</h4>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, ullam officiis. Consequuntur facilis ipsa aut unde assumenda culpa ipsum itaque, reprehenderit quisquam, commodi, illum ad ratione ex omnis porro minus?</p>
+                    <div class="p-create">    
+                    <h4 class="price-create">Precio:</h4>
+                        <p> $1000</p>
+                    </div> 
+                </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="container-create">
+            <article class="container-product-create">
+                <div class="container-img">
+                    <img src="https://image.freepik.com/vector-gratis/lindo-gato-comiendo-hamburguesas-guinando-ojo_253952-262.jpg" alt="">
+
+                </div>
+
+                <div class="info-create">
+
+                    <h3>Nombre del producto.</h3>
+
+                    <h4 class="description-create">Descripcion del producto:</h4>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, ullam officiis. Consequuntur facilis ipsa aut unde assumenda culpa ipsum itaque, reprehenderit quisquam, commodi, illum ad ratione ex omnis porro minus?</p>
+                    <div class="p-create">    
+                    <h4 class="price-create">Precio:</h4>
+                        <p> $1000</p>
+                    </div> 
+                </div>
+                </div>
+            </article>
+        </section>
+
+
+    </div>
+
+        
+    
+    </main>
+    <footer>
+        <%- include('../partials/footer-user') %> 
+    </footer>
+    
+</body>
+</html>

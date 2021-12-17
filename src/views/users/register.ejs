@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/views/login.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Los Rikolinos - Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+</head>
+<body>
+
+    <!-- Inicio del Header -->
+
+    <%- include('../partials/header')  %> 
+
+    <!-- Fin del Header -->
+
+    <!-- Inicio del Main -->
+
+    <main>
+        <section class="top-main">
+            <!-- icono usuario  -->
+            <div class="usuario">
+                <i class="far fa-user-circle"></i>
+            </div>
+        </section>
+        <!-- Titulo Registro...  -->
+        <p class="register-user">Registrarse</p>
+        <!-- Comienza el formulario  -->
+        <form action="/login.html" method="POST">
+        <!-- Poner nombre y apellido de usuario  -->
+        <div class="name-user">
+            <label for="nombre"></label>
+            <input type="text" placeholder="Nombre" name="usuario" id="nombre" required>
+            <input type="text" placeholder="Apellido" name="usuario" id="apellido" required>
+            </div>
+
+            <section >
+            <!-- Poner email de usuario  -->
+                <div class="email-password">
+                <label for="email"></label>
+                <input type="email, tel" placeholder="Correo electronico o número de teléfono" name="email" id="email" required>
+                
+                <!-- Poner contraseña de usuario  -->
+                    <label for="password"></label>
+                    <input type="password" placeholder="Escribe tu contraseña" name="password" id="password" required>
+                
+                    <!-- Poner contraseña de usuario, confirmar  -->
+                    <label for="password"></label>
+                    <input type="password" placeholder="Confirmar tu contraseña" name="password" id="password" required>
+                </div>
+
+            </section>
+            <!-- Boton de Registro -->
+        <section class="buton">
+            <input type="submit" value="Registrarme">
+            </section>
+
+            <hr class="hr">
+
+            <div class="link">
+                <p>¿Tenés cuenta?</p>
+                <a class="link" href="/login">Iniciar sesión</a>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- Fin del Main -->
+
+    <!-- Inicio del Footer -->
+
+    <footer>
+        
+        <%- include('../partials/footer-user')  %>
+
+    </footer>
+
+    <!-- Fin del Footer -->
+    
+</body>
+</html>
