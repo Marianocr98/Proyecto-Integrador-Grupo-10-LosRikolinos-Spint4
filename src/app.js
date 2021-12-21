@@ -1,11 +1,12 @@
 /* EXPRESS*/
 const express = require('express');
 const app = express();
-app.use(express.static('../public'));
+const path = require('path');
+app.use(express.static('public'));
 
 /* EJS */ 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', path.resolve(__dirname, 'views'));
 
 /* IMPLEMENTACION PARA PUT Y DELETE*/
 const methodOverride = require('method-override')
