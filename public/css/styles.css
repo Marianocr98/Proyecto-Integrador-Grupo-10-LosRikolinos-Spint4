@@ -211,7 +211,6 @@ animation: carrucel 14s infinite alternate linear;
     text-align: center;
     font-size: 24px;
     margin-bottom: 30px;    
-    font-family: 'Amiri', serif;
 }
 /*FIN DE SECCION DE NOSOTROS*/
 
@@ -285,6 +284,7 @@ animation: carrucel 14s infinite alternate linear;
     body {
         background-color: #000;
         color: #ebebeb;
+        
     }
 
     .top-header {
@@ -719,6 +719,7 @@ animation: carrucel 14s infinite alternate linear;
         padding: 0;
         box-sizing: border-box;
     }
+    
 
     .slider img {
         width: 100%;
