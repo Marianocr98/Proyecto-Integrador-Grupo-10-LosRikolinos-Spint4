@@ -124,6 +124,41 @@
     background: linear-gradient(90deg, rgba(9, 9, 7, 1) 0%, rgba(203, 28, 28, 1) 51%, rgba(9, 8, 7, 1) 100%);
 }
 
+.button-editions{
+    margin: 30px 0 20px;
+    display:flex;
+    justify-content: center;
+}
+.button-edit{
+    display:flex;    
+}
+.button-edit button {
+    width: 130px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.button-delete button {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.button-delete{
+    display:flex;
+    margin-left: 20px;
+}
+
+
 
 @media (min-width: 1000px) {
     .container-productDetail{

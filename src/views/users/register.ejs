@@ -33,30 +33,59 @@
                 <i class="far fa-user-circle"></i>
             </div>
         </section>
+  
         <!-- Titulo Registro...  -->
         <p class="register-user">Registrarse</p>
         <!-- Comienza el formulario  -->
-        <form action="/login.html" method="POST">
-        <!-- Poner nombre y apellido de usuario  -->
-        <div class="name-user">
-            <label for="nombre"></label>
-            <input type="text" placeholder="Nombre" name="usuario" id="nombre" required>
-            <input type="text" placeholder="Apellido" name="usuario" id="apellido" required>
-            </div>
+        <form action="/register" method="POST" enctype="multipart/form-data">
 
             <section >
-            <!-- Poner email de usuario  -->
+
                 <div class="email-password">
+
+                <!-- Poner nombre y apellido de usuario  -->
+                <label for="usuario"></label>
+                <input type="text" placeholder="Nombre y apellido" name="usuario" id="usuario" require>
+
+                <%if(locals.errors && errors.usuario) { %>
+                    <div class="text-danger">
+                        <%= errors.usuario.msg %> 
+                    </div>
+                    <% } %> 
+
+            <!-- Poner email de usuario  -->
+                
                 <label for="email"></label>
-                <input type="email, tel" placeholder="Correo electronico o número de teléfono" name="email" id="email" required>
+                <input type="email" placeholder="Correo electronico" name="email" id="email" require>
+
+                <%if(locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                    <% } %> 
                 
                 <!-- Poner contraseña de usuario  -->
                     <label for="password"></label>
-                    <input type="password" placeholder="Escribe tu contraseña" name="password" id="password" required>
+                    <input type="password" placeholder="Escribe tu contraseña" name="password" id="password" require>
+
+                    <%if(locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %> 
+                        </div>
+                        <% } %> 
                 
                     <!-- Poner contraseña de usuario, confirmar  -->
                     <label for="password"></label>
-                    <input type="password" placeholder="Confirmar tu contraseña" name="password" id="password" required>
+                    <input type="password" placeholder="Confirmar tu contraseña" name="password" id="password" require>
+
+                    <%if(locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %> 
+                        </div>
+                        <% } %>
+
+                    <label for="avatar">Tu avatar:</label>
+                    <input type="file" name="avatar" id="avatar">
                 </div>
 
             </section>

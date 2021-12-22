@@ -18,11 +18,37 @@ const productController = {
 
         res.render('./productos/productos' ,{productos:products})
     },
-
+    all:(req,res)=>{
+        res.render('./productos/productos' ,{productos:products})
+    },
+    formCreate: (req,res)=>{
+        res.render('./admin/admin')
+    },
+    productEdition : (req,res)=>{
+        res.render( './admin/productEdition')
+    },
+    edit : (req,res)=>{
+        const products = productModel.productos();
+        let id = req.params.id
+        for(let i = 0 ;  i < products.length; i++){
+            let idProducts = productModel[i].id
+                if( idProducts == id){
+                    products[i].title = req.body.title
+                    products[i].category = req.body.category
+                    products[i].price = req.body.price
+                }
+        }
+    },
+    delete : (req,res)=>{
+        const products = productModel.productos();
+        let id = req.params.id
+        products = products.filter(product =>{
+        let idProducts = product.id
+        return   id  != idProducts
+        })
+    },
     productDetail: (req, res) => {
-
         let detalle = productModel.find(req.params.id);
-
         res.render('./productos/productDetail', {detail: detalle});
     },
 
@@ -47,9 +73,7 @@ const productController = {
     shoppingCart : (req,res)=>{
         res.render('./productos/shopping-cart');
     }, 
-    admin: (req,res)=>{
-        res.render('./admin/admin');
-    },
+
 }
 
 
