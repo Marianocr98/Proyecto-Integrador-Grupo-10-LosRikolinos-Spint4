@@ -2,7 +2,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-app.use(express.static('public'));
+app.use(express.static('../public'));
+/*Middleware que capturta lo que se envia por post */
+app.use(express.urlencoded({extended:false}));
 
 /* EJS */ 
 app.set('view engine', 'ejs');
