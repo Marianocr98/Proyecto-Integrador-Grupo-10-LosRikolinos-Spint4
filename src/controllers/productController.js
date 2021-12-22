@@ -25,42 +25,25 @@ const productController = {
 
         res.render('./productos/productDetail', {detail: detalle});
     },
-    productsEmpanadas: (req, res) => {
 
-        const productsEmpanadas = productModel.empanadas();
+    category: (req, res) => {
 
-        res.render('./productos/productEmpanada', {empanada: productsEmpanadas});
+        const productos = productModel.searchCategory(req.params.categoria);
+
+        res.render('./productos/categorias', {productos})
     },
-    productsHamburguer : (req,res) => {
+    search: (req, res) => {
 
-        const productsHamburguesa = productModel.hamburguesa()
+        let busqueda = req.query.search.toLowerCase();
+        console.log("Estoy buscando:" + busqueda);
 
-        res.render('./productos/productHamburguer',{productsHamburguer : productsHamburguesa })
+        let productos = productModel.readFile();
+
+        let filtrados = productos.filter(e => e.title.toLowerCase().includes(busqueda) || e.category.toLowerCase().includes(busqueda));
+
+        res.render('./menu/comidaReq', { filtrados: filtrados})
     },
-    productsPizza : (req,res) => {
-
-        const productsPizza = productModel.pizza();
-
-        res.render('./productos/productPizza',{productPizza : productsPizza})
-    },
-    productsPastas : (req,res) => {
-
-        const productsPastas = productModel.pasta();
-
-        res.render('./productos/productPastas',{pastas : productsPastas })
-    },
-    productsAsado : (req,res) => {
-
-        const productsAsado = productModel.parrilla();
-
-        res.render('./productos/productAsado',{asado : productsAsado })
-    },
-    productsBebidas : (req,res) => {
-
-        const productsDrinks = productModel.bebidas();
-
-        res.render('./productos/bebidas',{drink : productsDrinks })
-    },
+    
     shoppingCart : (req,res)=>{
         res.render('./productos/shopping-cart');
     }, 

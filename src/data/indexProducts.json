@@ -1,9 +1,6 @@
 
 [
     {
-        "----EMPIEZAN LOS PRODUCTOS DE HOME---": ""
-    },
-    {
         "name": "Hamburguesa",
         "direction": "/productos/Hamburguesa",
         "image":"/img/hamburguesa2.jpg",
@@ -31,9 +28,10 @@
         "description":"Bebidas de todo tipo",
         "category": "home"
     },
-    {
-        "----EMPIEZAN LOS PRODUCTOS DE MENU---": ""
-    },
+
+
+
+
     {
         "id": "Hamburguesa",
         "image": "hamburguesa1.jpg",
@@ -69,8 +67,5 @@
         "image": "coctel.jpg",
         "textoAltenativo": "Seccion de bebidas",
         "category": "menu"
-    },
-    {
-        "----EMPIEZAN LOS PRODUCTOS DE MENU---": ""
     }
 ]

@@ -82,22 +82,31 @@ const modelController = function (name) {
             this.writeFile(updatedRows);
         },
 
+        searchCategory: function(value){
+            let rows = this.readFile();
+            console.log(" --- filtro de home")
+            
+            const result = rows.filter(i => i.category.toLowerCase() == value.toLowerCase());
+            console.log(" --- ESTOY ----------------------")
+            console.log(result);
+            return result;
+        },
+
         home: function () {
             let rows = this.readFile();
-            console.log(" --- filtro los visitados")
+            console.log(" --- filtro de home")
             
             const home = rows.filter(i => i.category == 'home')
             console.log(" --- ESTOY ----------------------")
             console.log(home)
             return home 
-
         },
 
         menu: function () {
             let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
+            console.log(" --- filtro de menu")
             const menu = rows.filter(i => i.category == 'menu')
-            console.log(" --- ESTOY EN VENTA--------------------")
+            console.log(" --- NUESTRO MENU--------------------")
             console.log(menu)
             return menu
         },
@@ -109,60 +118,6 @@ const modelController = function (name) {
             console.log(" --- ESTOY EN VENTA--------------------")
             console.log(productos)
             return productos
-        },
-
-        empanadas: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const empanadas = rows.filter(i => i.category == 'productsEmpanadas')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(empanadas)
-            return empanadas
-        },
-
-        hamburguesa: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const hamburguesa = rows.filter(i => i.category == 'productsHamburguesa')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(hamburguesa)
-            return hamburguesa
-        },
-
-        pizza: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const pizza = rows.filter(i => i.category == 'productsPizza')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(pizza)
-            return pizza
-        },
-
-        pasta: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const pasta = rows.filter(i => i.category == 'productsPastas')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(pasta)
-            return pasta
-        },
-
-        parrilla: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const parrilla = rows.filter(i => i.category == 'productsAsado')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(parrilla)
-            return parrilla
-        },
-
-        bebidas: function () {
-            let rows = this.readFile();
-            console.log(" --- filtro los que están para venta")
-            const bebidas = rows.filter(i => i.category == 'productsDrinks')
-            console.log(" --- ESTOY EN VENTA--------------------")
-            console.log(bebidas)
-            return bebidas
         },
     }
 }

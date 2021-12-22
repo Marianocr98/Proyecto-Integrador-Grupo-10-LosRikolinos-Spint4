@@ -22,7 +22,7 @@ const controllerIndex = {
         const menu = productModel.menu();
 
         res.render('./menu/menu', {categorias : menu} )
-    },
+    }
 } 
 
 module.exports =  controllerIndex;

@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/productos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:ital,wght@0,400;1,300&family=Lato:ital,wght@0,100;0,300;1,400&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <title>Los Rikolinos - Productos - Bebidas</title>
+    <title>Empanadas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -28,7 +31,7 @@
     <main>
         <div class="container-title-form">
             <h2>
-                Bebidas
+                Productos
             </h2>
 
             <form action="" method="">
@@ -41,16 +44,17 @@
             </form>
         </div>
 
+
         <section class="container-articles">
 
-            <% drink.forEach(element => { %>
+            <% filtrados.forEach(element => { %>
             <article class="container-productos">
                 <a href="">
                     <h4> <%= element.title  %> </h4>
                 </a>
                 <div class="container-img-barrita">
                     <div class="container-img">
-                        <a href="/productDetail/<%= element.id%> ">
+                        <a href="/productDetail/<%=element.id %>">
                             <img src="/img/<%=element.image %> " alt="<%= element.imgDescription %> ">
                         </a>
                         <h2> $<%= element.price %>,00 </h2>
@@ -67,20 +71,16 @@
 
         </section>
 
+ </main>
 
+ <!-- Fin del Main -->
 
+ <!-- Inicio del Footer -->
 
+ <%- include('../partials/footer')  %>
 
-    </main>
+ <!-- Fin del Footer -->
 
-    <!-- Fin del Main -->
+ </body>
 
-    <!-- Inicio del Footer -->
-
-    <%- include('../partials/footer')  %>
-
-    <!-- Fin del Footer -->
-
-</body>
-
-</html>
+ </html>
