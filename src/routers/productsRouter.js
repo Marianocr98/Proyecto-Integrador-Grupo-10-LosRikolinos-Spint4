@@ -32,7 +32,7 @@ router.delete('/productDetail/:id', productController.delete);
 
 
 router.get('/shopping-cart', productController.shoppingCart);
-router.get('/admin', productController.admin);
+// router.get('/admin', productController.admin);
 router.get('/productos/:categoria', productController.category);
 router.get('/search', productController.search);
 
