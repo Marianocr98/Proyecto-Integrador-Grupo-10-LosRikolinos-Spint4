@@ -3,24 +3,18 @@ const router = express.Router();
 
 const productController = require('../controllers/productController')
 
-
 //-- Listado de productos
-
 router.get('/productos', productController.productos)
 
 // Acción de creación (a donde se envía el formulario)-check
 router.post('/productos', productController.all)
 
-//-- Formulario de creación de productos
-
-router.get('/productos/create', productController.formCreate)
 
 //-- Detalle de un producto particular
-
 router.get('/productDetail/:id', productController.productDetail);
+
 // Formulario de edición de productos
 router.get('/productDetail/:id/edit', productController.productEdition);
-
 
 router.post('/productDetail/:id', productController.productDetail);
 
@@ -29,12 +23,25 @@ router.put('/productDetail/:id/', productController.edit);
 
 router.delete('/productDetail/:id', productController.delete);
 
-
+// -----------EN PROCESO------------------------
 
 router.get('/shopping-cart', productController.shoppingCart);
-router.get('/admin', productController.admin);
+// -----------EN PROCESO------------------------
+
+
+
+// -----------TERMINADOS------------------------
+
+// ----RUTA DE LAS CATEGORIAS DE LOS PRODUCTOS---
 router.get('/productos/:categoria', productController.category);
+
+// ----RUTA DE LA BARRA DEL BUSCADOR---- 
 router.get('/search', productController.search);
+
+//  --------VISTA DEL FORMULARIO DE CREACION - ADMIN--------
+router.get('/create', productController.create)
+
+// -----------TERMINADOS------------------------
 
 
 module.exports = router;

@@ -18,15 +18,19 @@ const productController = {
 
         res.render('./productos/productos' ,{productos:products})
     },
+
     all:(req,res)=>{
         res.render('./productos/productos' ,{productos:products})
     },
-    formCreate: (req,res)=>{
+
+    create: (req,res)=>{
         res.render('./admin/admin')
     },
+
     productEdition : (req,res)=>{
         res.render( './admin/productEdition')
     },
+
     edit : (req,res)=>{
         const products = productModel.productos();
         let id = req.params.id
@@ -39,6 +43,7 @@ const productController = {
                 }
         }
     },
+
     delete : (req,res)=>{
         const products = productModel.productos();
         let id = req.params.id
@@ -47,6 +52,7 @@ const productController = {
         return   id  != idProducts
         })
     },
+    
     productDetail: (req, res) => {
         let detalle = productModel.find(req.params.id);
         res.render('./productos/productDetail', {detail: detalle});

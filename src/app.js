@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-app.use(express.static('../public'));
+app.use(express.static('public'));
 /*Middleware que capturta lo que se envia por post */
 app.use(express.urlencoded({extended:false}));
 
@@ -12,6 +12,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 /* IMPLEMENTACION PARA PUT Y DELETE*/
 const methodOverride = require('method-override')
+// Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(methodOverride('_method'));
 
 /* REQUERIMIENTO DE RUTAS */

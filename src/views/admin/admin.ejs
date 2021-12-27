@@ -17,100 +17,63 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <section class="top">
-            <div class="admin">
-                <h1 class="create">Subir productos</h1>
-            </div>
-        </section>
+
+        <div class="container-title">
+            <h1 class="title">Subir productos</h1>
+        </div>
+
         <form action="" method="POST">
+
             <div class="padre-create">
+
                 <div class="name-submit-products">
                     <label for="name-product">Nombre:</label>
                     <input type="text" name="name-product" id="name-product">
                 </div>
+
                 <div class="price">
                     <label for="price">Precio: </label>
                     <input type="number" name="price">
-                    </div>
-                    <div class="description-submit-products">
-                        <label for="description">Descripción:</label>
-                        <textarea name="description" id="description" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="categorias-real">
-                        <label for="category">Categoria:</label>
-                            <select name="category" id="category">
-                            <option value="hamburguer">Hamburguesas</option>
-                            <option value="pizza">Pizza</option>
-                            <option value="empanada">Empanadas</option>
-                            <option value="ravioles">Pastas</option>
-                            <option value="asado">Asado</option>
-                            <option value="postre">Postres</option>
-                            <option value="bebidas">Bebidas</option>
-                        </select>
-                        
                 </div>
+
+                
+                <div class="categorias-real">
+                    <label for="category">Categoria:</label>
+                    <select name="category" id="category">
+                        <option value="hamburguer">Hamburguesas</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="empanada">Empanadas</option>
+                        <option value="ravioles">Pastas</option>
+                        <option value="asado">Asado</option>
+                        <option value="postre">Postres</option>
+                        <option value="bebidas">Bebidas</option>
+                    </select>
+                </div>
+                
                 <div class="file-submit-product">
                     <label for="img-product">Imagen del producto:</label>
                     <input type="file" name="img-product"> 
-                    
                 </div>
-                </div>
-   
-
                 
+                <div class="description-submit-products">
+                    <label for="description">Descripción:</label>
+                    <textarea name="description" id="description" cols="0" rows="6"></textarea>
+                </div>
+
+                <div class="button-admin">
+    
+                    <button>
+                        Cancelar
+                    </button type="submit">
+    
+                    <button  type="submit">
+                        Crear Producto
+                    </button>
+    
+                </div>
             </div>
-            <div class="button-admin">
-                <button>
-                    Cancelar
-                </button type = "submit">
-                <button  type = "submit">
-                    Crear Producto
-                </button>
-                </div>
+
         </form>
-
-        <div class="h2-add-create">
-            <h2>Productos agregados</h2>
-        </div>
-
-        <!-- Producto agregado -->
-
-
-        <section class="container-create">
-            <article class="container-product-create">
-                <div class="container-img">
-                    <img src="https://image.freepik.com/vector-gratis/lindo-gato-comiendo-hamburguesas-guinando-ojo_253952-262.jpg" alt="">
-                </div>
-                <div class="padre-products-add">
-                </div>
-            </article>
-        </section>
-
-        <section class="container-create">
-            <article class="container-product-create">
-                <div class="container-img">
-                    <img src="https://image.freepik.com/vector-gratis/lindo-gato-comiendo-hamburguesas-guinando-ojo_253952-262.jpg" alt="">
-                </div>
-                <div class="description-product-new">
-
-                    <h4 >
-                        Empanada tucumana
-                    </h4>
-                    <div class="description-product-created">
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita aut perferendis alias, magni excepturi eveniet temporibus iusto numquam vero veniam error sapiente modi, ipsam quis cum ratione voluptatum illo.
-                        </p>
-                    </div>
-                    <p class="discount-product-created">
-                        5% de descuento
-                    </p>
-                    <p class="price-product-created">
-                        $400
-                    </p>
-                </div>
-            </article>
-        </section>
-
 
     </div>
 
