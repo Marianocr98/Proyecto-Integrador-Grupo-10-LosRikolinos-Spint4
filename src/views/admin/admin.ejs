@@ -22,13 +22,13 @@
             <h1 class="title">Subir productos</h1>
         </div>
 
-        <form action="" method="POST">
+        <form action="/productos/createProduct" method="POST">
 
             <div class="padre-create">
 
                 <div class="name-submit-products">
-                    <label for="name-product">Nombre:</label>
-                    <input type="text" name="name-product" id="name-product">
+                    <label for="title">Nombre:</label>
+                    <input type="text" name="title" id="name-product">
                 </div>
 
                 <div class="price">
@@ -51,8 +51,8 @@
                 </div>
                 
                 <div class="file-submit-product">
-                    <label for="img-product">Imagen del producto:</label>
-                    <input type="file" name="img-product"> 
+                    <label for="img">Imagen del producto:</label>
+                    <input type="file" name="img"> 
                 </div>
                 
                 <div class="description-submit-products">
@@ -62,24 +62,22 @@
 
                 <div class="button-admin">
     
-                    <button>
-                        Cancelar
-                    </button type="submit">
-    
                     <button  type="submit">
                         Crear Producto
                     </button>
     
                 </div>
+
             </div>
 
         </form>
 
-    </div>
-
-        
+        <div class="button-admin cancel">
+            <a href="/viewCreate"><button>Cancelar</button type="submit"></a>
+        </div>    
     
     </main>
+
     <footer>
         <%- include('../partials/footer-user') %> 
     </footer>

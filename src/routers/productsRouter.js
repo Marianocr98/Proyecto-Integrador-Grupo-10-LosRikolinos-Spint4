@@ -7,7 +7,7 @@ const productController = require('../controllers/productController')
 router.get('/productos', productController.productos)
 
 // Acción de creación (a donde se envía el formulario)-check
-router.post('/productos', productController.all)
+router.post('/productos/createProduct', productController.createProduct)
 
 
 //-- Detalle de un producto particular
@@ -39,7 +39,7 @@ router.get('/productos/:categoria', productController.category);
 router.get('/search', productController.search);
 
 //  --------VISTA DEL FORMULARIO DE CREACION - ADMIN--------
-router.get('/create', productController.create)
+router.get('/viewCreate', productController.viewCreate)
 
 // -----------TERMINADOS------------------------
 

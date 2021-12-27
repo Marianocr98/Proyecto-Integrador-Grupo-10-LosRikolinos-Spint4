@@ -19,13 +19,25 @@ const productController = {
         res.render('./productos/productos' ,{productos:products})
     },
 
-    all:(req,res)=>{
-        res.render('./productos/productos' ,{productos:products})
-    },
-
-    create: (req,res)=>{
+    viewCreate: (req,res)=>{
         res.render('./admin/admin')
     },
+
+    createProduct:(req,res)=>{
+        value = {
+        "title": req.body.title,
+        "image": req.body.img,
+        "imgDescription": req.body.img,
+        "description": req.body.description,
+        "price": Number(req.body.price),
+        "section": "productos",
+        "category": req.body.category
+        }
+
+        productModel.create(value);
+        res.redirect('/productos')
+    },
+
 
     productEdition : (req,res)=>{
         res.render( './admin/productEdition')
