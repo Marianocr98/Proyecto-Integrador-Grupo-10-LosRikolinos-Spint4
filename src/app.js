@@ -18,6 +18,7 @@ app.use(methodOverride('_method'));
 const mainRutas = require('./routers/indexRouter');
 const rutaUser = require('./routers/userRouter') /*airu*/ 
 const products = require('./routers/productsRouter');
+const logMiddleware = require('./middlewares/logMiddleware')
 
 
 /* RUTAS */
@@ -25,8 +26,9 @@ app.use('/', mainRutas);
 app.use('/', rutaUser) 
 app.use('/', products);
 
+app.use(logMiddleware)
 
 /*Server Funcionando*/
-app.listen(process.env.PORT || 3000 , ()=>{
+app.listen(process.env.PORT || 3050 , ()=>{
     console.log('Servidor funcionando');
 });

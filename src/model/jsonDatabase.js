@@ -13,7 +13,7 @@ const modelController = function (name) {
         // Leo el archivo Json y lo transformo en Array de objeto literal     
         readFile: function () {
             let tableContents = fs.readFileSync(this.tablePath, 'utf-8');
-            return JSON.parse(tableContents) || [];
+            return JSON.parse(tableContents) || []; 
         },
         // Grabo el array que recibo por parámetro y lo paso a formato Json
         writeFile: function (contents) {
@@ -90,6 +90,8 @@ const modelController = function (name) {
             console.log(" --- ESTOY ----------------------")
             console.log(result);
             return result;
+            //TOLOWERCASE sirve para transformar cuanlquier palabra tanto mayuscula como minuscula sin importar si la palabra este con M o Minuscula
+            //ej: Hamburguesa, si lo busco con h minuscula lo encuentra igual
         },
 
         home: function () {

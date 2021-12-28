@@ -8,7 +8,6 @@ const jsonDB = require('../model/jsonDatabase');
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
 const productModel = jsonDB('products');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
 

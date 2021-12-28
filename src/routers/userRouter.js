@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-
 const path = require('path');
 const multer = require('multer');
+const logRegisterMiddleware = require('../middlewares/logRegisterMiddleware');
 
 const {body} = require('express-validator');
 
@@ -27,11 +27,10 @@ const validos = [
 ];
 
 router.get('/login', userController.login);
-
 router.get('/register', userController.register);
 
 /* Procesa el registro*/
-router.post('/register', uploadFile.single('avatar'), validos, userController.processRegister);
+router.post('/register', uploadFile.single('avatar'),logRegisterMiddleware, validos, userController.processRegister);
 
 router.get('/profile/:userId', userController.profile);
 
