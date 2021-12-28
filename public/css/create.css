@@ -83,11 +83,76 @@ body{
 
 .cancel {
     max-width: 290px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 .button-admin a {
     width: 100%;
+}
+
+hr {
+    width: 50%; 
+    margin: 50px auto;
+}
+
+h3 {
+    margin: 35px;
+}
+/*----------------tablas------------- */
+
+.container-table {
+    text-align: center;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.imageTh,
+.nombreTh,
+.priceTh,
+.imagenTd,
+.nombreTd,
+.priceTd {
+    display: none;
+}
+
+.containerProducts{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+
+.enlace {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border: 2px solid white;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.editar {
+    background-color: green;
+}
+
+.eliminar {
+    background-color: red;
 }
 
 @media (min-width: 769px) 
@@ -114,6 +179,23 @@ body{
         max-width: 273px;
         margin: 0 auto;
     }
+    th,
+    td {
+        padding: 15px;
+    }
+    .containerProducts,
+    .productoTh {
+        display: none;
+    }
+    .imageTh,
+    .nombreTh,
+    .priceTh,
+    .imagenTd,
+    .nombreTd,
+    .priceTd {
+            display: table-cell;
+            vertical-align: inherit;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -124,5 +206,12 @@ body{
     .cancel {
         max-width: 374px;
         margin: 0 auto;
+    }
+    th,
+    td {
+        padding: 25px;
+    }
+    .container-img {
+        width: 110px;
     }
 }

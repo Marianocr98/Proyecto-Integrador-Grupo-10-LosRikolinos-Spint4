@@ -19,7 +19,9 @@ const productController = {
     },
 
     viewCreate: (req,res)=>{
-        res.render('./admin/admin')
+
+        let listProduct = productModel.all();
+        res.render('./admin/admin', {listProduct})
     },
 
     createProduct:(req,res)=>{
@@ -34,34 +36,33 @@ const productController = {
         }
 
         productModel.create(value);
-        res.redirect('/productos')
+        res.redirect('/viewCreate')
     },
 
 
     productEdition : (req,res)=>{
-        res.render( './admin/productEdition')
+        let producto = productModel.find(req.params.id)
+        res.render( './admin/productEdition', {producto})
     },
 
     edit : (req,res)=>{
-        const products = productModel.productos();
-        let id = req.params.id
-        for(let i = 0 ;  i < products.length; i++){
-            let idProducts = productModel[i].id
-                if( idProducts == id){
-                    products[i].title = req.body.title
-                    products[i].category = req.body.category
-                    products[i].price = req.body.price
-                }
-        }
+        let product = productModel.find(req.params.id);
+
+		let aCambiar = {
+            id: req.params.id,
+            title: req.body.title,
+            description: req.body.description,
+            price: req.body.price,
+            category: req.body.category,
+            image: product.image
+        };
+		productModel.update(aCambiar);
+		res.redirect('/viewCreate');
     },
 
     delete : (req,res)=>{
-        const products = productModel.productos();
-        let id = req.params.id
-        products = products.filter(product =>{
-        let idProducts = product.id
-        return   id  != idProducts
-        })
+        productModel.delete(req.params.id);
+		res.redirect('/viewCreate');
     },
     
     productDetail: (req, res) => {

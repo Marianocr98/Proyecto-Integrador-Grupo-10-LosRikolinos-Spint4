@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+
     <%- include('../partials/header') %> 
 
     <main>
@@ -75,12 +76,41 @@
         <div class="button-admin cancel">
             <a href="/viewCreate"><button>Cancelar</button type="submit"></a>
         </div>    
-    
+        
+        <hr>
+
+        <div class="container-table">
+
+            <h3>Listado de Productos</h3>
+
+            
+            <table class="table">
+                <tr>
+                    <th class="imageTh">Imagen</th>
+                    <th class="productoTh">Productos</th>
+                    <th class="nombreTh">Nombre</th>
+                    <th class="priceTh">Precio</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <% listProduct.forEach(element => { %>
+                    <tr>
+                        <td class="imagenTd"><a href="/productDetail/<%=element.id %>" class="enlace"><img
+                                    src="/img/<%= element.image %>" alt="<%= element.title %>" class="container-img"> </a></td>
+                        <td class="containerProducts"><a href="/productDetail/<%=element.id %> %> " class="enlace"><%= element.title %> <img src="/img/<%= element.image %>" alt="<%= element.title %>" class="container-img"></a> $<%= element.price %></td>
+                        <td class="nombreTd"><a href="/productDetail/<%=element.id %>" class="enlace"> <%= element.title %></a></td>
+                        <td class="priceTd">$<%= element.price %> </td>
+                        <td><a href="/productEdition/<%= element.id %> "><button class="editar">Editar</button></a></td>
+                        <form action="/productDelete/<%=element.id%>?_method=DELETE" method="POST">
+                            <td><button class="eliminar">Eliminar</button></td>
+                        </form>
+                    </tr>
+                    <% }) %>
+            </table>
+        </div>
     </main>
 
-    <footer>
-        <%- include('../partials/footer-user') %> 
-    </footer>
+    <%- include('../partials/footer-user') %> 
     
 </body>
 </html>

@@ -1,13 +1,11 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "title": "Jamón y Queso",
-  "image": "empanada-jamon-y-queso.jpg",
-  "imgDescription": "Empanadas jamon y queso",
-  "description": "Empanadas de jamón con extra queso",
-  "price": 199,
-  "section": "productos",
-  "category": "Empanadas"
+  "description": "  Empanadas de jamón con extra queso  ",
+  "price": "199  ",
+  "category": "option",
+  "image": "empanada-jamon-y-queso.jpg"
  },
  {
   "id": 2,
