@@ -17,15 +17,31 @@ const productController = {
 
         res.render('./productos/productos' ,{productos:products})
     },
-    all:(req,res)=>{
-        res.render('./productos/productos' ,{productos:products})
-    },
-    formCreate: (req,res)=>{
+
+    viewCreate: (req,res)=>{
         res.render('./admin/admin')
     },
+
+    createProduct:(req,res)=>{
+        let value = {
+        id: 0,
+        title: req.body.title,
+        image: req.file.filename,
+        description: req.body.description,
+        price: Number(req.body.price),
+        section: "productos",
+        category: req.body.category
+        }
+
+        productModel.create(value);
+        res.redirect('/productos')
+    },
+
+
     productEdition : (req,res)=>{
         res.render( './admin/productEdition')
     },
+
     edit : (req,res)=>{
         const products = productModel.productos();
         let id = req.params.id
@@ -38,6 +54,7 @@ const productController = {
                 }
         }
     },
+
     delete : (req,res)=>{
         const products = productModel.productos();
         let id = req.params.id
@@ -46,6 +63,7 @@ const productController = {
         return   id  != idProducts
         })
     },
+    
     productDetail: (req, res) => {
         let detalle = productModel.find(req.params.id);
         res.render('./productos/productDetail', {detail: detalle});

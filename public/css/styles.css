@@ -562,7 +562,7 @@ animation: carrucel 14s infinite alternate linear;
 }
 
 /* Empieza el diseño responsivo 990px */
-@media (min-width: 1024px) {
+@media (min-width: 1030px) {
     .contenedor-buscador-navbar {
         display: block;
 
