@@ -326,5 +326,13 @@
   "price": 199,
   "section": "productos",
   "category": "Bebidas"
+ },
+ {
+  "id": "37",
+  "title": "Brocheta",
+  "description": " Brocheta de pollo",
+  "price": "350 ",
+  "category": "asado",
+  "image": "imgProductos-1640730881734.jpg"
  }
 ]

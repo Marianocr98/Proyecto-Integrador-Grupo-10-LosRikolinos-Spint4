@@ -54,7 +54,7 @@ const productController = {
             description: req.body.description,
             price: req.body.price,
             category: req.body.category,
-            image: product.image
+            image: req.file != null ? req.file.filename : product.image
         };
 		productModel.update(aCambiar);
 		res.redirect('/viewCreate');
