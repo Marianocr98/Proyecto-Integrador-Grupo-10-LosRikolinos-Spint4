@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 app.use(express.static('public'));
-/*Middleware que capturta lo que se envia por post */
+
+/*Para procesar los formularios */
 app.use(express.urlencoded({extended:false}));
 
 /* EJS */ 

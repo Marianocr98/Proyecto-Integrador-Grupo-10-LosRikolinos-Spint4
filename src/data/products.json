@@ -328,25 +328,5 @@
   "price": 199,
   "section": "productos",
   "category": "Bebidas"
- },
- {
-  "title": "Pollo Rostizado",
-  "image": "Pollo.jpg",
-  "imgDescription": "Pollo.jpg",
-  "description": "Pollo Rostizado",
-  "price": 200,
-  "section": "productos",
-  "category": "asado",
-  "id": 37
- },
- {
-  "title": "Pollo",
-  "image": "",
-  "imgDescription": "",
-  "description": "",
-  "price": 0,
-  "section": "productos",
-  "category": "hamburguer",
-  "id": 38
  }
 ]

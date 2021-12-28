@@ -24,14 +24,14 @@ const productController = {
     },
 
     createProduct:(req,res)=>{
-        value = {
-        "title": req.body.title,
-        "image": req.body.img,
-        "imgDescription": req.body.img,
-        "description": req.body.description,
-        "price": Number(req.body.price),
-        "section": "productos",
-        "category": req.body.category
+        let value = {
+        id: 0,
+        title: req.body.title,
+        image: req.file.filename,
+        description: req.body.description,
+        price: Number(req.body.price),
+        section: "productos",
+        category: req.body.category
         }
 
         productModel.create(value);

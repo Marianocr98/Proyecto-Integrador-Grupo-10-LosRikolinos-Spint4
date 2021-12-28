@@ -22,7 +22,7 @@
             <h1 class="title">Subir productos</h1>
         </div>
 
-        <form action="/productos/createProduct" method="POST">
+        <form action="/productos/createProduct" method="POST" enctype="multipart/form-data">
 
             <div class="padre-create">
 
@@ -51,8 +51,8 @@
                 </div>
                 
                 <div class="file-submit-product">
-                    <label for="img">Imagen del producto:</label>
-                    <input type="file" name="img"> 
+                    <label for="imgProductos">Imagen del producto:</label>
+                    <input type="file" name="imgProductos"> 
                 </div>
                 
                 <div class="description-submit-products">
